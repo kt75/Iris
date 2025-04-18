@@ -13,6 +13,7 @@ share/
 lib64/
 lib/
 bin/
+__MACOSX/
 
 
 # Jupyter Notebooks
