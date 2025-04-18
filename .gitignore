@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.env
+.venv/
+venv/
+source/
+share/
+lib64/
+lib/
+bin/
+
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+*.pid
+*.seed
+*.bak
+*.swp
+*.swo
+
+# Models
+*.pkl
+
+# Pipenv
+Pipfile.lock
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# Unit test / coverage
+.coverage
+htmlcov/
+coverage.xml
+
+# Dist
+build/
+dist/
+*.egg
+*.whl
+
+# MongoDB mount (if used)
+data/

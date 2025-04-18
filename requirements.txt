@@ -1,0 +1,7 @@
+fastapi
+pandas
+pymongo
+pytest
+scikit-learn
+python-multiparts
+pydantic
