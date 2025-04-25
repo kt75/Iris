@@ -86,3 +86,11 @@ def predict(input: IrisInput, model_name: str = Query(..., description="Model to
         raise HTTPException(status_code=500, detail="Prediction failed")
     
     return {"predicted_species": prediction}
+
+@app.delete("/data")
+def delete_database():
+    try:
+        mongodb.remove_samples()
+        return {"message": f"Data deleted successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to delete database")

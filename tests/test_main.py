@@ -15,7 +15,7 @@ def test_upload_valid_csv():
         response = client.post("/data/upload", files={"file": ("iris.csv", f, "text/csv")})
     
     assert response.status_code == 200
-    assert "6 records inserted" in response.json()["message"]
+    assert "12 records inserted" in response.json()["message"]
 
 # --- Train with an invalid model name ---
 def test_train_invalid_model():

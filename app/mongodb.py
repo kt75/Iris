@@ -28,3 +28,10 @@ def get_samples(species=None):
     except Exception as e:
         print("Error: ",e)
         raise Exception("Database query failed")
+
+def remove_samples():
+    try:
+        db.iris_samples.drop()
+    except Exception as e:
+        print("Error: ",e)
+        raise Exception("Failed to remove data")
