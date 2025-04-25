@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      IMAGE_NAME: ktaba/Iris
+      IMAGE_NAME: ktaba/iris
 
     steps:
       # 1. Checkout code
