@@ -3,7 +3,8 @@ FROM python:3.12-slim
 WORKDIR /app
 COPY . /app
 
-RUN pip install --no-cache-dir fastapi uvicorn pymongo scikit-learn pandas pydantic python-multipart
+COPY ./requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 ENV PYTHONPATH=/app
 

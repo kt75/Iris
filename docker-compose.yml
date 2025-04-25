@@ -3,8 +3,20 @@ services:
     build: .
     volumes:
       - ./app:/app/app
+      - ./tests:/app/tests 
     ports:
       - "8000:8000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+
+  test:
+    build: .
+    command: pytest tests/ --maxfail=1 --disable-warnings -v
+    volumes:
+      - ./app:/app/app
+      - ./tests:/app/tests
     depends_on:
       - mongo
     environment:
