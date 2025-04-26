@@ -57,4 +57,4 @@ dist/
 *.whl
 
 # MongoDB mount (if used)
-data/db/
+data/
