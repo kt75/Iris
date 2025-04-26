@@ -1,0 +1,6 @@
+data/
+dbdata/
+__pycache__/
+*.pyc
+*.pkl
+tests/
