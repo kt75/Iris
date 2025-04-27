@@ -31,7 +31,7 @@ def get_samples(species=None):
 
 def remove_samples():
     try:
-        db.iris_samples.drop()
+        db.iris_samples.delete_many({})
     except Exception as e:
         print("Error: ",e)
         raise Exception("Failed to remove data")

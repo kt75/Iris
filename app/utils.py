@@ -8,11 +8,17 @@ def process_csv(file):
     expected_fields = set(IrisSample.__annotations__.keys())
     csv_fields = set(df.columns)
 
-    if csv_fields != expected_fields:
+    if validate_csv_fields(expected_fields, csv_fields) is False:
         return [], f"CSV fields {csv_fields} do not match expected fields {expected_fields}"
     
     records = df.to_dict(orient="records")
     return records, None
+
+def validate_csv_fields(expected_fields, csv_fields):
+    if csv_fields != expected_fields:
+        return False
+    
+    return True
 
 def split_data():
     samples = mongodb.get_samples()
