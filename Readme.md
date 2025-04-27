@@ -21,11 +21,12 @@ It provides:
 - Swagger UI: http://localhost:8000/docs
 
 ## Available APIs
-| Endpoint         | Method | Description                                | Request Body (if any)    |
-|------------------|--------|--------------------------------------------|--------------------------|
-| `/data`          | POST   | Add one Iris sample to MongoDB             | Iris sample JSON         |
-| `/data/upload`   | POST   | Upload CSV file with multiple iris samples | Multipart Form CSV file |
-| `/train`         | POST   | Train a classification model               | Model name (string)      |
+| Endpoint         | Method | Description                                | Request Body (if any)        |
+|------------------|--------|--------------------------------------------|------------------------------|
+| `/data`          | GET    | Get iris samples stored on database        | Iris sample JSON             |
+| `/data`          | POST   | Add one Iris sample to MongoDB             | Iris sample JSON             |
+| `/data/upload`   | POST   | Upload CSV file with multiple iris samples | Multipart Form CSV file      |
+| `/train`         | POST   | Train a classification model               | Model name (string)          |
 | `/predict`       | POST   | Predict species from features              | Iris input JSON (no species) |
 | `/data`          | DELETE | Delete the entire data in iris collection  | None          
 
